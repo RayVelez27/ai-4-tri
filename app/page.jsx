@@ -23,7 +23,7 @@ export default function Page() {
                 {/* Navigation */}
                 <nav className="flex items-center justify-between mb-8">
                     {/* Logo */}
-                    <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
+                    <div className="flex items-center bg-white px-4 py-2 rounded-2xl shadow-sm">
                         <svg
                             className=""
                             xmlns="http://www.w3.org/2000/svg"
