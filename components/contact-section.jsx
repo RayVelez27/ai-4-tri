@@ -37,10 +37,10 @@ const ContactSection = () => {
     return (
         <section className="mt-16 md:mt-24 pb-16">
             <div className="text-center mb-12">
-                <span className="text-[hsl(48,96%,53%)] font-semibold text-sm uppercase tracking-wider">Contact Us</span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4">Get in Touch</h2>
+                <span className="text-[hsl(48,96%,53%)] font-semibold text-sm uppercase tracking-wider">Reach Out</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4">Start the Conversation</h2>
                 <p className="text-[hsl(215,16%,47%)] text-lg max-w-2xl mx-auto">
-                    Ready to put AI to work for your business? Our team is here to help you get started.
+                    Curious about AI for your business? Want to attend an event? Just want to talk? We're here.
                 </p>
             </div>
 
@@ -92,7 +92,7 @@ const ContactSection = () => {
 
                 {/* Contact Form Card */}
                 <div className="bg-[hsl(0,0%,100%)] rounded-[2rem] p-8 md:p-10">
-                    <h3 className="text-xl font-bold mb-8">Send us a Message</h3>
+                    <h3 className="text-xl font-bold mb-8">Drop Us a Line</h3>
 
                     {status === 'success' && (
                         <div className="mb-6 p-4 rounded-xl bg-green-50 text-green-700 text-sm font-medium">
@@ -154,7 +154,7 @@ const ContactSection = () => {
                             </label>
                             <textarea
                                 id="message"
-                                placeholder="Tell us how we can help your business..."
+                                placeholder="What's on your mind? Questions, ideas, or just say hello..."
                                 rows={4}
                                 value={formData.message}
                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}

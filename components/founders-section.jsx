@@ -45,11 +45,11 @@ const FoundersSection = () => {
                     <span className="text-sm font-semibold text-[hsl(215,16%,47%)]">Who We Are</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    Meet the Founders
+                    Behind the Initiative
                     <span className="text-[hsl(48,96%,53%)] inline-block align-top text-3xl md:text-4xl ml-1">+</span>
                 </h2>
                 <p className="text-[hsl(215,16%,47%)] text-lg md:text-xl max-w-3xl mt-6 leading-relaxed">
-                    Two entrepreneurs on a mission to bring real, practical AI to the businesses that power Eastern Washington.
+                    We're AI entrepreneurs and developers who've spent years building automation systems for businesses everywhere. Now, we're bringing that experience home — to help the Tri-Cities community we live in tap into what's possible.
                 </p>
             </div>
 

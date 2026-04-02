@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+const OrbitingSkills = dynamic(() => import('./orbiting-skills'), { ssr: false });
 
 import missedCallAnimation from '../public/images/Missed_Call.json';
 import briefcaseAnimation from '../public/images/Briefcase.json';
@@ -20,27 +21,27 @@ const FeaturesSection = () => {
     const features = [
         {
             icon: 'phone_missed',
-            title: 'Missed Call Recovery',
+            title: 'Never Miss a Call Again',
             description:
-                'Capture every missed call with instant SMS follow-ups that engage leads, answer questions, and book appointments automatically.',
+                'Right now, missed calls mean missed revenue. AI can follow up instantly — so every ring turns into a real opportunity.',
         },
         {
             icon: 'settings',
-            title: 'Workflow Automation',
+            title: 'Operations That Run Themselves',
             description:
-                'Automate repetitive tasks like follow-ups, scheduling, and internal processes so your business runs efficiently without manual effort.',
+                'The busywork that eats your day — follow-ups, scheduling, reminders — can run on autopilot while you focus on what matters.',
         },
         {
             icon: 'chat',
-            title: 'Smart Lead Response',
+            title: 'Instant First Impressions',
             description:
-                'Every new inquiry gets an immediate response — turning more interest into real customers without delays.',
+                'When someone reaches out, speed wins. AI makes sure every inquiry gets an immediate, professional response.',
         },
         {
             icon: 'link',
-            title: 'Seamless Integrations',
+            title: 'Works With What You Have',
             description:
-                'We connect directly into the tools you already use, so everything works together without disruption.',
+                'No rip-and-replace. These systems plug into the tools you already use — your CRM, your calendar, your workflow.',
         },
     ];
 
@@ -49,26 +50,21 @@ const FeaturesSection = () => {
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-12">
                 <div className="flex-1">
                     <div className="inline-block bg-[hsl(0,0%,100%)] px-5 py-2 rounded-full shadow-sm mb-6">
-                        <span className="text-sm font-semibold text-[hsl(215,16%,47%)]">What We Install</span>
+                        <span className="text-sm font-semibold text-[hsl(215,16%,47%)]">What AI Can Do</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                        AI Systems Built for
+                        The Tools Are Here
                         <br />
-                        Real Businesses
+                        Right Now
                         <span className="text-[hsl(48,96%,53%)] inline-block align-top text-3xl md:text-4xl ml-1">+</span>
                     </h2>
                     <p className="text-[hsl(215,16%,47%)] text-lg md:text-xl max-w-3xl mt-6 leading-relaxed">
-                        We're helping local businesses take the next step — turning everyday operations into automated systems that capture more
-                        opportunities, respond instantly, and run smoother behind the scenes.
+                        The same AI that powers billion-dollar companies is now accessible to every business on every corner in the Tri-Cities. Here's what it looks like in action.
                     </p>
                 </div>
 
-                <div className="flex-shrink-0 w-[560px] md:w-[680px] overflow-hidden rounded-2xl">
-                    <img
-                        src="/images/Untitled design - 2026-03-30T174402.289.png"
-                        alt="Tri-Cities vineyard landscape"
-                        className="w-full h-auto object-cover"
-                    />
+                <div className="flex-shrink-0 w-full lg:w-[500px] overflow-hidden">
+                    <OrbitingSkills />
                 </div>
             </div>
 

@@ -4,28 +4,28 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: 'What exactly does AI 4 TRI install for my business?',
-        answer: 'We set up AI-powered systems that handle missed call recovery, automated lead follow-ups, appointment scheduling, and workflow automation — all customized to fit your specific business needs.',
+        question: 'What is AI 4 TRI?',
+        answer: 'AI 4 TRI is a local initiative to bring AI awareness and education to Tri-Cities businesses. We host events, run live demos, and connect business owners with the people and tools that can help them modernize their operations.',
     },
     {
-        question: 'How long does it take to get up and running?',
-        answer: 'Most businesses are fully set up in as little as 1 hour. We handle the entire installation and configuration so you can start seeing results immediately.',
+        question: 'Is this a sales pitch?',
+        answer: 'No. AI 4 TRI exists to educate and inspire. Our events are free, open, and designed to show you what\'s possible — not pressure you into buying anything. If you want to go further, we can connect you with local experts who can help.',
     },
     {
-        question: 'Do I need any technical skills to use this?',
-        answer: 'Not at all. Our systems are designed to run in the background with zero technical knowledge required. We handle all the setup, and you get a simple dashboard to monitor performance.',
+        question: 'Do I need to be technical to attend an event?',
+        answer: 'Not at all. Our events are built for business owners, not engineers. We keep things practical — real examples, real results, zero jargon.',
     },
     {
-        question: 'What kind of businesses do you work with?',
-        answer: 'We work with local businesses across Eastern WA — from contractors and clinics to restaurants and service providers. If you rely on phone calls and leads, we can help.',
+        question: 'What kind of businesses is this for?',
+        answer: 'Any local business that relies on phone calls, leads, appointments, or repeat customers. Contractors, clinics, restaurants, agencies, service providers — if you run a business in the Tri-Cities, this is for you.',
     },
     {
-        question: 'How much does it cost?',
-        answer: "Pricing depends on the systems you need. We offer flexible plans designed for small and mid-size businesses. Reach out for a free consultation and custom quote.",
+        question: 'Why the Tri-Cities?',
+        answer: 'This region transformed the world during the Manhattan Project. That same spirit of innovation still lives here. We believe the Tri-Cities shouldn\'t just watch the AI revolution — it should help lead it.',
     },
     {
-        question: 'Can I try it before committing?',
-        answer: 'Yes! We offer a demo so you can see exactly how the AI systems work for your business before making any commitment.',
+        question: 'How do I get involved?',
+        answer: 'Come to an event, bring a friend, or just reach out. Whether you\'re curious or ready to move, the first step is showing up.',
     },
 ];
 
@@ -40,9 +40,9 @@ const FAQSection = () => {
         <section className="mt-16 md:mt-24">
             <div className="text-center mb-12">
                 <span className="text-[hsl(48,96%,53%)] font-semibold text-sm uppercase tracking-wider">FAQ</span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4">Frequently Asked Questions</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4">Questions We Get Asked</h2>
                 <p className="text-[hsl(215,16%,47%)] text-lg max-w-2xl mx-auto">
-                    Everything you need to know about how AI 4 TRI helps local businesses grow.
+                    New to AI? Skeptical? Curious? Good — that's exactly who this is for.
                 </p>
             </div>
 

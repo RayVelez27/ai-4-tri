@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import CountUp from 'components/count-up';
 import CallWidget from 'components/call-widget';
 import FeaturesSection from 'components/features-section';
 import FoundersSection from 'components/founders-section';
@@ -133,11 +134,10 @@ export default function Page() {
 
                     {/* Navigation Links - Desktop */}
                     <div className="hidden lg:flex items-center gap-8 bg-white px-8 py-3 rounded-full shadow-sm text-sm font-semibold text-[hsl(215,16%,47%)]">
-                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors no-underline" href="#features">Our Mission</a>
-                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors no-underline" href="#founders">Who We Are</a>
                         <a className="hover:text-[hsl(217,91%,60%)] transition-colors no-underline" href="#events">Events</a>
+                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors no-underline" href="#features">Mission</a>
+                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors no-underline" href="#founders">Who We Are</a>
                         <a className="hover:text-[hsl(217,91%,60%)] transition-colors no-underline" href="#faq">FAQ</a>
-                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors no-underline" href="#contact">Reach Out</a>
                     </div>
 
                     {/* CTA Button - Desktop */}
@@ -158,14 +158,10 @@ export default function Page() {
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
                     <div className="lg:hidden bg-white rounded-3xl p-6 mb-6 shadow-sm flex flex-col gap-4 text-sm font-semibold text-[hsl(215,16%,47%)]">
-                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors py-2 no-underline" href="#features">Our Mission</a>
-                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors py-2 no-underline" href="#founders">Who We Are</a>
                         <a className="hover:text-[hsl(217,91%,60%)] transition-colors py-2 no-underline" href="#events">Events</a>
+                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors py-2 no-underline" href="#features">Mission</a>
+                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors py-2 no-underline" href="#founders">Who We Are</a>
                         <a className="hover:text-[hsl(217,91%,60%)] transition-colors py-2 no-underline" href="#faq">FAQ</a>
-                        <a className="hover:text-[hsl(217,91%,60%)] transition-colors py-2 no-underline" href="#contact">Reach Out</a>
-                        <a href="#contact" className="mt-2 px-6 py-3 rounded-full border-2 border-[hsl(222,84%,5%)] font-semibold hover:bg-[hsl(222,84%,5%)] hover:text-white transition-all bg-white w-full text-center no-underline">
-                            Contact Us
-                        </a>
                     </div>
                 )}
 
@@ -177,8 +173,8 @@ export default function Page() {
                         style={{ flex: hoveredCol === 'img1' ? '5' : hoveredCol === 'img2' ? '4' : '7' }}
                     >
                         {/* Hero Content */}
-                        <div className="bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 flex-grow flex flex-col justify-center shadow-sm relative overflow-hidden">
-                            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 relative z-10">
+                        <div className="bg-white rounded-[2.5rem] p-6 sm:p-8 md:p-12 lg:p-16 flex-grow flex flex-col justify-center shadow-sm relative overflow-hidden">
+                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4 sm:mb-6 relative z-10">
                                 <span className="block overflow-hidden">
                                     <span className="block hero-slide-in" style={{ animationDelay: '0ms' }}>
                                         Tri-Cities was
@@ -212,7 +208,7 @@ export default function Page() {
                                     </span>
                                 </span>
                             </h1>
-                            <p className={`text-[hsl(215,16%,47%)] text-lg md:text-xl mb-10 max-w-xl leading-relaxed transition-all duration-500 ${hoveredCol ? 'opacity-0 max-h-0 mb-0 overflow-hidden' : 'opacity-100 max-h-96'}`}>
+                            <p className={`text-[hsl(215,16%,47%)] text-base sm:text-lg md:text-xl mb-6 sm:mb-10 max-w-xl leading-relaxed transition-all duration-500 ${hoveredCol ? 'lg:opacity-0 lg:max-h-0 lg:mb-0 lg:overflow-hidden opacity-100 max-h-96' : 'opacity-100 max-h-96'}`}>
 Through local events and live demos, we show Tri-Cities business owners how to turn everyday operations into automated, revenue-generating systems.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -234,30 +230,30 @@ Through local events and live demos, we show Tri-Cities business owners how to t
                         </div>
 
                         {/* Stats Cards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 h-auto sm:h-64 lg:h-auto shrink-0">
-                            <div className="bg-[hsl(217,91%,60%)] rounded-[2rem] p-8 text-white flex flex-col justify-between relative shadow-sm h-48 sm:h-full">
-                                <span className="text-[hsl(48,96%,53%)] absolute top-6 right-6 text-2xl font-bold">+</span>
-                                <div className="text-2xl md:text-3xl font-bold mt-auto">30–50%</div>
-                                <div className="text-blue-100 text-sm md:text-base font-medium mt-2">Missed Calls Go Unanswered</div>
+                        <div className="flex sm:grid sm:grid-cols-3 gap-4 sm:gap-6 h-auto sm:h-64 lg:h-auto shrink-0 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 -mx-2 px-2 sm:mx-0 sm:px-0 snap-x snap-mandatory">
+                            <div className="bg-[hsl(217,91%,60%)] rounded-[2rem] p-6 sm:p-8 text-white flex flex-col justify-between relative shadow-sm min-w-[200px] sm:min-w-0 h-36 sm:h-full snap-start">
+                                <span className="text-[hsl(48,96%,53%)] absolute top-4 sm:top-6 right-4 sm:right-6 text-2xl font-bold">+</span>
+                                <div className="text-2xl md:text-3xl font-bold mt-auto"><CountUp end={21} prefix="$" suffix="B+" /></div>
+                                <div className="text-blue-100 text-sm md:text-base font-medium mt-2">Local Economy</div>
                             </div>
 
-                            <div className="bg-white rounded-[2rem] p-8 flex flex-col justify-between relative shadow-sm h-48 sm:h-full">
-                                <span className="text-[hsl(217,91%,60%)] absolute top-6 right-6 text-3xl font-bold">+</span>
-                                <div className="text-2xl md:text-3xl font-bold mt-auto">&lt; 60 Seconds</div>
-                                <div className="text-[hsl(215,16%,47%)] text-sm md:text-base font-medium mt-2">AI Response Time</div>
+                            <div className="bg-white rounded-[2rem] p-6 sm:p-8 flex flex-col justify-between relative shadow-sm min-w-[200px] sm:min-w-0 h-36 sm:h-full snap-start">
+                                <span className="text-[hsl(217,91%,60%)] absolute top-4 sm:top-6 right-4 sm:right-6 text-3xl font-bold">+</span>
+                                <div className="text-2xl md:text-3xl font-bold mt-auto"><CountUp end={60} suffix="%+" /></div>
+                                <div className="text-[hsl(215,16%,47%)] text-sm md:text-base font-medium mt-2">First Contact Is Digital</div>
                             </div>
 
-                            <div className="bg-white rounded-[2rem] p-8 flex flex-col justify-between relative shadow-sm h-48 sm:h-full">
-                                <span className="text-[hsl(217,91%,60%)] absolute top-6 right-6 text-3xl font-bold">+</span>
-                                <div className="text-2xl md:text-3xl font-bold mt-auto">24/7</div>
-                                <div className="text-[hsl(215,16%,47%)] text-sm md:text-base font-medium mt-2">Opportunity Capture</div>
+                            <div className="bg-white rounded-[2rem] p-6 sm:p-8 flex flex-col justify-between relative shadow-sm min-w-[200px] sm:min-w-0 h-36 sm:h-full snap-start">
+                                <span className="text-[hsl(217,91%,60%)] absolute top-4 sm:top-6 right-4 sm:right-6 text-3xl font-bold">+</span>
+                                <div className="text-2xl md:text-3xl font-bold mt-auto"><CountUp end={9900} suffix="+" /></div>
+                                <div className="text-[hsl(215,16%,47%)] text-sm md:text-base font-medium mt-2">Local Businesses</div>
                             </div>
                         </div>
                     </div>
 
                     {/* Image Column 1 */}
                     <div
-                        className="relative rounded-[2rem] overflow-hidden h-[300px] lg:h-full transition-all duration-700 ease-in-out cursor-pointer"
+                        className="hidden lg:block relative rounded-[2rem] overflow-hidden lg:h-full transition-all duration-700 ease-in-out cursor-pointer"
                         style={{ flex: hoveredCol === 'img1' ? '4' : hoveredCol === 'img2' ? '1' : '2' }}
                         onMouseEnter={() => setHoveredCol('img1')}
                         onMouseLeave={() => setHoveredCol(null)}
@@ -283,7 +279,7 @@ Through local events and live demos, we show Tri-Cities business owners how to t
 
                     {/* Image Column 2 */}
                     <div
-                        className="relative rounded-[2rem] overflow-hidden h-[300px] lg:h-full transition-all duration-700 ease-in-out cursor-pointer"
+                        className="hidden lg:block relative rounded-[2rem] overflow-hidden lg:h-full transition-all duration-700 ease-in-out cursor-pointer"
                         style={{ flex: hoveredCol === 'img2' ? '5' : hoveredCol === 'img1' ? '2' : '3' }}
                         onMouseEnter={() => setHoveredCol('img2')}
                         onMouseLeave={() => setHoveredCol(null)}
@@ -320,12 +316,12 @@ Through local events and live demos, we show Tri-Cities business owners how to t
                     <FeaturesSection />
                 </div>
 
-                <div id="gallery">
-                    <MasonryGallery />
-                </div>
-
                 <div id="founders">
                     <FoundersSection />
+                </div>
+
+                <div id="gallery">
+                    <MasonryGallery />
                 </div>
 
                 <div id="faq">
