@@ -25,7 +25,7 @@ const FoundersSection = () => {
             image: '/images/ray.jpg',
             linkText: 'Founder of Pasco Web Designs',
             linkUrl: 'https://pascowebdesigns.com',
-            linkedIn: 'https://www.linkedin.com/in/rayvelez',
+            linkedIn: 'https://www.linkedin.com/in/raymond-velez-96aa4a172',
         },
         {
             name: 'Parker Lydeen',
@@ -34,7 +34,7 @@ const FoundersSection = () => {
             image: '/images/parker.jpg',
             linkText: 'Founder of Button Scale',
             linkUrl: 'https://buttonscale.com',
-            linkedIn: 'https://www.linkedin.com/in/parkerlydeen',
+            linkedIn: 'https://www.linkedin.com/in/parker-lydeen-548695325',
         },
     ];
 

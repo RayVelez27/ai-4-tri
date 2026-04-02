@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const WEBHOOK_URL = 'https://propellerfocal.app.n8n.cloud/webhook/e1bcf4ca-16bc-427b-ae13-a9b5b1d0e20b';
+const CONTACT_API = '/api/contact';
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const ContactSection = () => {
         setIsSubmitting(true);
         setStatus(null);
         try {
-            const response = await fetch(WEBHOOK_URL, {
+            const response = await fetch(CONTACT_API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),

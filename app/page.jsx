@@ -212,20 +212,20 @@ export default function Page() {
 Through local events and live demos, we show Tri-Cities business owners how to turn everyday operations into automated, revenue-generating systems.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <div className="flex flex-col items-start">
-                                    <button className="group bg-[hsl(222,84%,5%)] text-white pl-8 pr-2 py-2 rounded-full font-semibold flex items-center justify-between gap-4 transition-all hover:opacity-90">
-                                        <span>Get AI Installed</span>
-                                        <div className="bg-white text-[hsl(222,84%,5%)] rounded-full w-10 h-10 flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                                            <span className="text-sm font-bold">→</span>
-                                        </div>
-                                    </button>
-                                    <span className="text-xs text-[hsl(215,16%,47%)] mt-1.5 ml-2">
-                                        ⚡ Installed in as little as 1 hour
+                                <a href="#events" className="group bg-[hsl(222,84%,5%)] text-white pl-8 pr-2 py-2 rounded-full font-semibold flex items-center justify-between gap-4 transition-all hover:opacity-90 no-underline">
+                                    <span>Upcoming Events</span>
+                                    <div className="bg-white text-[hsl(222,84%,5%)] rounded-full w-10 h-10 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                                        <span className="text-sm font-bold">→</span>
+                                    </div>
+                                </a>
+                                <div className="relative self-start">
+                                    <a href="#contact" className="px-8 h-14 rounded-full border border-[hsl(214,32%,91%)] font-semibold hover:border-[hsl(222,84%,5%)] transition-colors flex items-center no-underline">
+                                        See It In Action
+                                    </a>
+                                    <span className="absolute -top-2 -right-2 bg-[hsl(48,96%,53%)] text-[hsl(222,84%,5%)] text-[10px] font-bold px-2 py-0.5 rounded-full leading-none">
+                                        Coming Soon
                                     </span>
                                 </div>
-                                <button className="px-8 h-14 rounded-full border border-[hsl(214,32%,91%)] font-semibold hover:border-[hsl(222,84%,5%)] transition-colors self-start flex items-center">
-                                    See It In Action
-                                </button>
                             </div>
                         </div>
 
