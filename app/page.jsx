@@ -141,8 +141,8 @@ export default function Page() {
                     </div>
 
                     {/* CTA Button - Desktop */}
-                    <a href="#contact" className="hidden lg:block px-6 py-3 rounded-full border-2 border-[hsl(222,84%,5%)] font-semibold hover:bg-[hsl(222,84%,5%)] hover:text-white transition-all bg-white no-underline">
-                        Contact Us
+                    <a href="/workshop" className="hidden lg:block px-6 py-3 rounded-full border-2 border-[hsl(222,84%,5%)] font-semibold hover:bg-[hsl(222,84%,5%)] hover:text-white transition-all bg-white no-underline">
+                        Save Your Spot
                     </a>
 
                     {/* Hamburger - Mobile/Tablet */}
@@ -212,8 +212,8 @@ export default function Page() {
 Through local events and live demos, we show Tri-Cities business owners how to turn everyday operations into automated, revenue-generating systems.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href="#events" className="group bg-[hsl(222,84%,5%)] text-white pl-8 pr-2 py-2 rounded-full font-semibold flex items-center justify-between gap-4 transition-all hover:opacity-90 no-underline">
-                                    <span>Upcoming Events</span>
+                                <a href="/workshop" className="group bg-[hsl(222,84%,5%)] text-white pl-8 pr-2 py-2 rounded-full font-semibold flex items-center justify-between gap-4 transition-all hover:opacity-90 no-underline">
+                                    <span>Reserve Your Seat</span>
                                     <div className="bg-white text-[hsl(222,84%,5%)] rounded-full w-10 h-10 flex items-center justify-center group-hover:translate-x-1 transition-transform">
                                         <span className="text-sm font-bold">→</span>
                                     </div>

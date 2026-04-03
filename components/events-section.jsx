@@ -3,9 +3,11 @@
 const events = [
     {
         title: 'AI for Local Business Workshop',
-        time: 'TBD',
+        time: 'April 27th, 1:00 PM – 4:00 PM',
+        location: 'Sunset Gardens, Richland WA',
         description: 'A hands-on look at how local businesses are using AI to automate the work that used to eat their day.',
         tag: 'Workshop',
+        link: '/workshop',
     },
     {
         title: 'Tri-Cities Networking Mixer',
@@ -59,7 +61,7 @@ const ComingSoonCalendar = () => {
     }
 
     return (
-        <div className="relative">
+        <div>
             <div className="grid grid-cols-7 gap-1 mb-2">
                 {dayNames.map((d) => (
                     <div key={d} className="text-center text-sm font-semibold text-[hsl(215,16%,47%)]/50 py-2">
@@ -67,20 +69,30 @@ const ComingSoonCalendar = () => {
                     </div>
                 ))}
             </div>
-            <div className="grid grid-cols-7 gap-1 opacity-30">
-                {cells.map((day, i) => (
-                    <div
-                        key={i}
-                        className="relative flex flex-col items-center justify-center aspect-square rounded-xl text-base md:text-lg text-[hsl(222,84%,5%)]"
-                    >
-                        <span className={`leading-none ${!day ? 'invisible' : ''}`}>{day || '·'}</span>
-                    </div>
-                ))}
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-[hsl(217,91%,60%)] text-white px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider shadow-lg">
-                    Dates Coming Soon
-                </div>
+            <div className="grid grid-cols-7 gap-1">
+                {cells.map((day, i) => {
+                    const isEventDay = day === 27;
+                    if (isEventDay) {
+                        return (
+                            <a
+                                key={i}
+                                href="/workshop"
+                                className="relative flex flex-col items-center justify-center aspect-square rounded-xl text-base md:text-lg bg-[hsl(217,91%,60%)] text-white font-bold no-underline hover:bg-[hsl(217,91%,65%)] transition-colors cursor-pointer"
+                            >
+                                <span className="leading-none">{day}</span>
+                                <span className="absolute bottom-1.5 w-1.5 h-1.5 rounded-full bg-white" />
+                            </a>
+                        );
+                    }
+                    return (
+                        <div
+                            key={i}
+                            className="relative flex flex-col items-center justify-center aspect-square rounded-xl text-base md:text-lg text-[hsl(222,84%,5%)]/30"
+                        >
+                            <span className={`leading-none ${!day ? 'invisible' : ''}`}>{day || '·'}</span>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
@@ -115,32 +127,44 @@ const EventsSection = () => {
 
                 {/* Events List */}
                 <div className="space-y-4">
-                    {events.map((event, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-3xl p-6 md:p-8 shadow-sm flex flex-col sm:flex-row gap-4 sm:gap-6 transition-all hover:shadow-md"
-                        >
-                            <div className="flex-shrink-0 w-16 h-16 bg-[hsl(215,16%,47%)]/10 rounded-2xl flex flex-col items-center justify-center">
-                                <span className="text-xs font-semibold uppercase leading-none text-[hsl(215,16%,47%)]">Apr</span>
-                                <span className="text-lg font-bold leading-none mt-0.5 text-[hsl(215,16%,47%)]">TBD</span>
-                            </div>
-
-                            <div className="flex-1 min-w-0">
-                                <div className="flex flex-wrap items-center gap-2 mb-1">
-                                    <h3 className="text-lg font-bold">{event.title}</h3>
-                                    <span
-                                        className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${
-                                            tagColors[event.tag] || 'bg-gray-100 text-gray-600'
-                                        }`}
-                                    >
-                                        {event.tag}
+                    {events.map((event, index) => {
+                        const Wrapper = event.link ? 'a' : 'div';
+                        const wrapperProps = event.link ? { href: event.link } : {};
+                        return (
+                            <Wrapper
+                                key={index}
+                                {...wrapperProps}
+                                className={`bg-white rounded-3xl p-6 md:p-8 shadow-sm flex flex-col sm:flex-row gap-4 sm:gap-6 transition-all hover:shadow-md relative no-underline text-inherit ${event.link ? 'cursor-pointer' : ''}`}
+                            >
+                                {event.link && (
+                                    <span className="absolute -top-2 -right-2 bg-[hsl(48,96%,53%)] text-[hsl(222,84%,5%)] text-[10px] font-bold px-2.5 py-1 rounded-full leading-none z-10">
+                                        Sign Up
                                     </span>
+                                )}
+                                <div className={`flex-shrink-0 w-16 h-16 rounded-2xl flex flex-col items-center justify-center ${event.link ? 'bg-[hsl(217,91%,60%)] text-white' : 'bg-[hsl(215,16%,47%)]/10'}`}>
+                                    <span className={`text-xs font-semibold uppercase leading-none ${event.link ? '' : 'text-[hsl(215,16%,47%)]'}`}>Apr</span>
+                                    <span className={`text-lg font-bold leading-none mt-0.5 ${event.link ? '' : 'text-[hsl(215,16%,47%)]'}`}>{event.time === 'TBD' ? 'TBD' : '27'}</span>
                                 </div>
-                                <p className="text-sm text-[hsl(215,16%,47%)] mb-1">Date & time to be announced</p>
-                                <p className="text-[hsl(215,16%,47%)] text-sm leading-relaxed">{event.description}</p>
-                            </div>
-                        </div>
-                    ))}
+
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                                        <h3 className="text-lg font-bold">{event.title}</h3>
+                                        <span
+                                            className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${
+                                                tagColors[event.tag] || 'bg-gray-100 text-gray-600'
+                                            }`}
+                                        >
+                                            {event.tag}
+                                        </span>
+                                    </div>
+                                    <p className="text-sm text-[hsl(215,16%,47%)] mb-1">
+                                        {event.time === 'TBD' ? 'Date & time to be announced' : `${event.time} — ${event.location}`}
+                                    </p>
+                                    <p className="text-[hsl(215,16%,47%)] text-sm leading-relaxed">{event.description}</p>
+                                </div>
+                            </Wrapper>
+                        );
+                    })}
                 </div>
             </div>
         </section>
