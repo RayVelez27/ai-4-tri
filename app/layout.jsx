@@ -1,4 +1,7 @@
 import '../styles/globals.css';
+import { PostHogProvider } from './providers';
+import { Suspense } from 'react';
+import PostHogPageView from './PostHogPageView';
 
 export const metadata = {
     title: {
@@ -32,7 +35,12 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body className="antialiased font-sans">
-                {children}
+                <PostHogProvider>
+                    <Suspense fallback={null}>
+                        <PostHogPageView />
+                    </Suspense>
+                    {children}
+                </PostHogProvider>
             </body>
         </html>
     );

@@ -19,6 +19,7 @@
     "markdown-to-jsx": "^7.7.16",
     "next": "^16.0.8",
     "ogl": "^1.0.11",
+    "posthog-js": "^1.364.7",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "unique-names-generator": "^4.7.1"
