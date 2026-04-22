@@ -79,7 +79,7 @@ export default function WorkshopPage() {
                         </h1>
 
                         <p className="text-[hsl(215,16%,47%)] text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                            A hands-on, live-environment workshop for Tri-Cities business owners. Transform everyday operations into revenue-generating systems using <strong className="text-[hsl(222,84%,5%)]">Claude Code</strong>, <strong className="text-[hsl(222,84%,5%)]">n8n</strong>, and <strong className="text-[hsl(222,84%,5%)]">Lovable</strong>.
+                            A hands-on, live-environment workshop for anyone ready to drive revenue with AI. Transform everyday operations into automated, revenue-generating systems using <strong className="text-[hsl(222,84%,5%)]">Claude Code</strong>, <strong className="text-[hsl(222,84%,5%)]">n8n</strong>, and <strong className="text-[hsl(222,84%,5%)]">Lovable</strong>.
                         </p>
 
                         {/* Event Details */}
@@ -118,6 +118,48 @@ export default function WorkshopPage() {
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Who This Is For */}
+                <section className="mt-16 md:mt-24">
+                    <div className="text-center mb-12">
+                        <div className="inline-block bg-white px-5 py-2 rounded-full shadow-sm mb-6">
+                            <span className="text-sm font-semibold text-[hsl(215,16%,47%)]">Who This Is For</span>
+                        </div>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Built for Doers</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div className="bg-white rounded-[2rem] p-8 shadow-sm text-center">
+                            <div className="w-14 h-14 rounded-2xl bg-[hsl(48,96%,53%)]/10 flex items-center justify-center mx-auto mb-6">
+                                <span className="text-2xl">&#x1f3af;</span>
+                            </div>
+                            <h3 className="text-xl font-bold mb-3">Owner / Operators</h3>
+                            <p className="text-[hsl(215,16%,47%)] text-sm leading-relaxed">
+                                You run the business and wear every hat. Learn how to automate the repetitive work so you can focus on growth.
+                            </p>
+                        </div>
+
+                        <div className="bg-white rounded-[2rem] p-8 shadow-sm text-center">
+                            <div className="w-14 h-14 rounded-2xl bg-[hsl(217,91%,60%)]/10 flex items-center justify-center mx-auto mb-6">
+                                <span className="text-2xl">&#x1f4a1;</span>
+                            </div>
+                            <h3 className="text-xl font-bold mb-3">Employees</h3>
+                            <p className="text-[hsl(215,16%,47%)] text-sm leading-relaxed">
+                                Want to bring more value to your employer? Show up with AI skills that save time, cut costs, and open new revenue channels.
+                            </p>
+                        </div>
+
+                        <div className="bg-white rounded-[2rem] p-8 shadow-sm text-center">
+                            <div className="w-14 h-14 rounded-2xl bg-[hsl(48,96%,53%)]/10 flex items-center justify-center mx-auto mb-6">
+                                <span className="text-2xl">&#x1f680;</span>
+                            </div>
+                            <h3 className="text-xl font-bold mb-3">AI-Curious</h3>
+                            <p className="text-[hsl(215,16%,47%)] text-sm leading-relaxed">
+                                You've heard the hype. This is where you see it in action and learn how to use AI to actually drive revenue.
+                            </p>
                         </div>
                     </div>
                 </section>
