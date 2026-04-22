@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import CountUp from 'components/count-up';
-import CallWidget from 'components/call-widget';
 import FeaturesSection from 'components/features-section';
 import FoundersSection from 'components/founders-section';
 import FAQSection from 'components/faq-section';
@@ -335,7 +334,6 @@ Through local events and live demos, we show Tri-Cities business owners how to t
                 <AI4TriFooter />
             </div>
 
-            <CallWidget />
         </div>
     );
 }

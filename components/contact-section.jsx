@@ -67,16 +67,6 @@ const ContactSection = () => {
 
                         <div className="flex items-start gap-4">
                             <div className="w-12 h-12 rounded-2xl bg-[hsl(48,96%,53%)]/10 flex items-center justify-center flex-shrink-0">
-                                <span className="text-[hsl(48,96%,53%)] text-xl">📞</span>
-                            </div>
-                            <div>
-                                <div className="text-sm text-[hsl(215,16%,47%)] mb-1">Phone</div>
-                                <span className="text-[hsl(222,84%,5%)] font-medium">+1 (555) 019-2834</span>
-                            </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-2xl bg-[hsl(48,96%,53%)]/10 flex items-center justify-center flex-shrink-0">
                                 <span className="text-[hsl(48,96%,53%)] text-xl">📍</span>
                             </div>
                             <div>
